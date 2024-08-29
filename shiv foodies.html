@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="icon" type="image/x-icon" href="https://images-eu.ssl-images-amazon.com/images/I/51TUE01jQkL._AC_UL600_SR600,600_.jpg">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b8da9e;
+    color: #333;
+    background-image: url(https://media.istockphoto.com/id/1198380802/vector/food-background-vegetables-seamless-pattern-healthy-eating-tomato-garlic-carrot-pepper.jpg?s=612x612&w=0&k=20&c=jHB3uTWZrakPyAgqSQfOApxSq_jIwHRx00LiOV2YHEk=);
+    width: 100%;
+    height: auto;
+
+}
+
+.menu-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(229, 233, 193);
+    box-shadow: 0px 0px 49px 17px rgba(0,0,0,0.88);
+-webkit-box-shadow: 0px 0px 49px 17px rgba(0,0,0,0.88);
+-moz-box-shadow: 0px 0px 49px 17px rgba(0,0,0,0.88);
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.menu-header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    color: #777;
+}
+
+.menu-section {
+    margin-bottom: 20px;
+}
+
+.menu-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #444;
+    border-bottom: 2px solid #080808;
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 0.5px solid #000000;
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 30px;
+    border-radius: 37px 0px 37px 0px;
+-webkit-border-radius: 37px 0px 37px 0px;
+-moz-border-radius: 37px 0px 37px 0px;
+border: 7px double   rgb(0, 0, 0);}
+
+.menu-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.menu-details .description {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #777;
+}
+
+.menu-details .price {
+    font-size: 1.2em;
+    color: #444;
+    margin-top: auto;
+}
+
+.mi{
+    width: 100%;
+    border-radius: 10px;
+}
+.ha1{
+    margin-top: 0px;
+    background: linear-gradient(0deg, rgb(245, 212, 146) 0%, rgb(207, 209, 97) 100%);
+    color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    height: 130px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.logo {
+    mix-blend-mode: multiply;
+    width: 70px;
+    height: 80px;
+    border-radius: 60%;
+    box-shadow: 0px 1px 37px 7px rgba(0,0,0,0.88);
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0px 1px 37px 7px rgba(0,0,0,0.88);
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    }
+}
+.t1{
+    width: 100%;
+}
+.td2{
+    text-align: end;
+}
+.hh1{
+    text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0, 0, 0, 0.137);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-top: 0px;
+    animation-duration: 2s;
+    animation-name: slidein;
+    color: #000000;
+}
+marquee {
+    box-shadow: rgba(192, 180, 72, 0.678) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.411) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(140, 228, 40, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 25px;
+    width: 98%;
+    color: #ffffff;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    75% {
+        font-size: 500%;
+        margin-left: 25%;
+        width: 150%;
+    }
+    to {
+        margin-top: 0%;
+        width: 100%;
+    }
+}
+.a1{
+    background: linear-gradient(0deg, rgb(245, 212, 146) 0%, rgb(207, 209, 97) 100%);    color: white;    color: #000000;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    animation: fadeInUp 1s ease-out;
+}
+.a1 li{
+    margin-top: -5px;
+}
+</style>
+<body>
+    <header class="ha1">
+        <table class="t1">
+            <tr>
+                <td><b><u>ઉર્મિલા સોજીત્રા</u> <br> 97276 40063 </b></td>
+                <td> <center><img src="https://i.pinimg.com/236x/f0/19/94/f019941e2058e6d31bfc3fdb11f89fb6.jpg" class="logo"></center></td>
+                <td class="td2"><b><u>પારૂલ મારકણા </u><br> 96873 73631 </b></td>
+            </tr>     
+        </table>
+        <center>
+                <h1 class="hh1">SHIV FOODIES</h1>
+                <marquee><p>ઘુઘરા, ડ્રાયફ્રુટ ચીકી, કાજુ કતરી, જીરા પુરી, કસ્તુરી મેથી પુરી, ફરસી પુરી, ખારી પુરી, શક્કરપારા મુખવાસ, ખજુરનું અથાણુ, હેમ્પર (ગિફટ) પેકીંગ માટે મળો.</p></marquee>
+            </center>
+            </header>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <div class="menu-container">
+        <header class="menu-header">
+            <h1>અમારી સ્પેસ્યાલીટી  </h1>
+            <p>Delicious Food, Delightful Experiences</p>
+        </header>
+
+        <div >
+            <img src="https://i.postimg.cc/28YzFBS5/ecb3732c-9448-45ab-a353-9a1b9017479c.jpg" class="mi">
+          </div>
+
+        <section class="menu-section">
+            <h2>Gujarati Sweet</h2>
+
+            <div class="menu-item">
+                <img src="https://i.postimg.cc/3NP2dcSJ/70ad60af-9d56-4468-8402-761af72f651a.jpg" alt="Bruschetta">
+                <div class="menu-details">
+                    <h3>મીઠા ધુધરા</h3>
+                    <p class="description"></p>
+                    <span class="price">₹650/- 1kg</span>
+                    <span class="price">₹330/- 500gm</span>
+
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRolXvc0r3fm3Y_qfB1Tjf-5raM4X_qSqdaWg&s" alt="Bruschetta">
+                <div class="menu-details">
+                    <h3>ડ્રાય ફૂડ ચિક્કી</h3>
+                    <p class="description"></p>
+                    <span class="price">₹550/- 1kg</span>
+                </div>
+            </div>
+
+           
+
+            <div class="menu-item">
+                <img src="https://www.nestleprofessional.in/sites/default/files/2022-07/Kaju-Katli.jpg" alt="Bruschetta">
+                <div class="menu-details">
+                    <h3>કાજુ કત્રી</h3>
+                    <p class="description"></p>
+                    <span class="price">₹650/- 1kg</span>
+                </div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7O9fUkisiyLArYpMPFO59VYB_4baDviWHIg&s" alt="Chocolate Cake">
+                <div class="menu-details">
+                    <h3>સક્કરપારા </h3>
+                    <p class="description">માત્ર ધીમાં <span class="price">₹500/- 1kg</span></p>
+                    <p class="description">માત્ર તેલમાં <span class="price">₹450/- 1kg</span></p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="menu-section">
+            <h2>Gujarati Puri</h2>
+
+
+            <div class="menu-item">
+                <img src="https://img-global.cpcdn.com/recipes/bcc0c378a72709bc/680x482cq70/khasta-layered-mathri-recipe-main-photo.webp" alt="Stuffed Mushrooms">
+                <div class="menu-details">
+                    <h3>મઠડી પુરી</h3>
+                    <p class="description"></p>
+                    <span class="price">₹540/- 1kg</span>
+                </div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="https://i.postimg.cc/g2Cfqz5G/0b9e4b2d-8fa9-4f2f-a535-5900252fbbc0.jpg" alt="Steak Frites">
+                <div class="menu-details">
+                    <h3>જીરા પૂરી (રવા-મેંદા  વાળી)</h3>
+                    <p class="description">માત્ર ધીમાં <span class="price">₹500/- 1kg</span></p>
+                    <p class="description">માત્ર તેલમાં <span class="price">₹450/- 1kg</span>
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="menu-section">
+            <h2>Mix Items</h2>
+            
+
+            <div class="menu-item">
+                <img src="https://i.postimg.cc/sfZyWL1P/ceb935a9-a9ba-4c92-b852-0650d449271b.jpg" alt="Bruschetta">
+                <div class="menu-details">
+                    <h3>ખજૂરનું અથાણું</h3>
+                    <p class="description"></p>
+                    <span class="price">₹420/- 1kg</span>
+                    <span class="price">₹220/- 500gm</span>
+                    <span class="price">₹120/- 250gm</span>
+                </div>
+            </div>
+
+
+            <div class="menu-item">
+                <img src="https://app.agashestore.in/Uploads/ItemImages/162668_2d18b908-b681-4f61-903d-8dbfddd944b7.jpeg" alt="Chocolate Cake">
+                <div class="menu-details">
+                    <h3>મુખવાસ</h3>
+                    <p class="description"></p>
+                    <span class="price"></span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <table >
+                    <tr>
+                        <td><img src="https://i.postimg.cc/NFST9Ctq/f4954e45-4287-4d86-881f-893d7e578bf8.jpg" alt="Chocolate Cake"></td>
+                    </tr>  
+                        <tr>
+                            <td><img src="https://m.media-amazon.com/images/I/51Pjh7sPnnL.jpg" alt="Chocolate Cake"></td>
+                        </tr>
+                </table>
+                <div class="menu-details">
+                    <h3>હેમ્પર</h3>
+                    <p class="description">અમારે ત્યાં હેમ્પર બે રીતે બનાવામાં આવે છે.
+                        <li>સંપૂર્ણ મજૂરીથી.</li><li>અમારી વસ્તુઓ દ્વારા.</li>
+                    </p>
+                    <span class="price">હેમ્પર નો ભાવ ઉપર્યુક્ત શરત અનુસાર અલગ અલગ રહેશે.</span>
+                </div>
+            </div>
+
+           
+
+        </section>
+
+
+
+    </div>
+    <br><br><br>
+    <div class="a1">
+        <li>બી-૨૦૪, ૪૦૨, આઇકોન હાઇટ્સ, શાયોના પ્લાઝાની બાજુમાં, સિલ્વર ચોક, BRTS કેનાલ રોડ, પુણાગામ, સુરત</li>       
+    </div>
+</body>
+</html>
